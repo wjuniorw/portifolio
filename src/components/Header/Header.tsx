@@ -1,6 +1,8 @@
 import type { HTMLAttributes } from 'react'
 
-import { Button, Container, ThemeSwitcher } from '@core/ui'
+import { useState } from 'react'
+
+import { BrandMonogramIcon, Button, Container, ThemeSwitcher } from '@core/ui'
 
 import * as styles from './Header.css'
 
@@ -9,12 +11,22 @@ export interface HeaderProps extends HTMLAttributes<HTMLElement> {
 }
 
 export function Header({ className, ...props }: HeaderProps) {
+  const [isBrandHovered, setIsBrandHovered] = useState(false)
   const containerClass = [styles.header, className].filter(Boolean).join(' ')
 
   return (
     <header className={containerClass} {...props}>
       <Container className={styles.headerInner}>
-        <a href="/" className={styles.brandLink} aria-label="Wilson Junior Portfolio Root">
+        <a
+          href="/"
+          className={styles.brandLink}
+          aria-label="Wilson Junior Portfolio Root"
+          onMouseEnter={() => setIsBrandHovered(true)}
+          onMouseLeave={() => setIsBrandHovered(false)}
+          onFocus={() => setIsBrandHovered(true)}
+          onBlur={() => setIsBrandHovered(false)}
+        >
+          <BrandMonogramIcon isAnimating={isBrandHovered} size={36} />
           <span className={styles.statusDot} aria-hidden="true" />
           <span className={styles.brandTitle}>wjunior.dev.br</span>
           <span className={styles.rootBadge}>ROOT // ARCHITECT</span>

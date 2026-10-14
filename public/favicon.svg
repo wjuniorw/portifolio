@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none">
+  <!-- Fundo Obsidiana com Borda Sutil Terracota -->
+  <rect width="64" height="64" rx="14" fill="#0b0a09" />
+  <rect x="1.5" y="1.5" width="61" height="61" rx="12.5" stroke="#2e2924" stroke-width="2" />
+
+  <!-- W-COCAR (5 Penas Radiais formando a letra W + Testeira em Arco) -->
+  <g>
+    <!-- Pena Externa Esquerda (Haste esquerda do W) -->
+    <path d="M13 38 L7 18 C7 14 11 13 13 17 L18 35 Z" fill="#d97742" />
+
+    <!-- Pena Intermediária Esquerda -->
+    <path d="M17 36 L14 14 C14 10 18 10 19 14 L21 35 Z" fill="#b85423" />
+
+    <!-- Pena Central Soberana (Pico central do W) -->
+    <path d="M22 35 L22 9 C22 5 26 5 26 9 L26 35 Z" fill="#d97742" />
+
+    <!-- Pena Intermediária Direita -->
+    <path d="M27 35 L29 14 C30 10 34 10 34 14 L31 36 Z" fill="#b85423" />
+
+    <!-- Pena Externa Direita (Haste direita do W) -->
+    <path d="M30 35 L35 17 C37 13 41 14 41 18 L35 38 Z" fill="#d97742" />
+
+    <!-- Traçado Geométrico do W conectando a base das penas (Testeira do Cocar) -->
+    <path
+      d="M9 20 L16 40 L24 25 L32 40 L39 20"
+      stroke="#f2ece4"
+      stroke-width="3.2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+
+    <!-- Arco Base da Testeira Indígena -->
+    <path
+      d="M12 43 Q24 38 36 43"
+      stroke="#d97742"
+      stroke-width="2.5"
+      stroke-linecap="round"
+    />
+
+    <!-- Grafismo / Ponto de Ouro no Centro da Coroa -->
+    <circle cx="24" cy="12" r="2" fill="#eab308" />
+  </g>
+
+  <!-- Letra J (Engenharia / Precisão Monoespaçada) -->
+  <g>
+    <!-- Topo do J -->
+    <path
+      d="M44 20 H54"
+      stroke="#d97742"
+      stroke-width="3.5"
+      stroke-linecap="round"
+    />
+    <!-- Haste e Curva do J -->
+    <path
+      d="M50 20 V42 C50 48.5 45.5 52 39.5 52 C35.5 52 33 49.5 32 46.5"
+      stroke="#f2ece4"
+      stroke-width="4.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </g>
+</svg>

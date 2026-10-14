@@ -1,0 +1,21 @@
+---
+import { Hero } from '@components/Hero'
+import Layout from '@layouts/Layout.astro'
+import { Header } from '@components/Header'
+import { Footer } from '@components/Footer'
+import { RootsAndCraft } from '@components/RootsAndCraft'
+import { ArchitectureCases } from '@components/ArchitectureCases'
+
+const edgeColo = Astro.locals.runtime?.cf?.colo ?? 'SSA_EDGE'
+---
+
+<Layout
+  title="Wilson Junior // Senior Software Architect & CTO Portfolio"
+  description="Sistemas com raízes fortes e arquitetura sem ruído. Monólitos Modulares, DDD, Clean Architecture, gateways em Go e sistemas resilientes — do silício à borda da Cloudflare."
+>
+  <Header client:load />
+  <Hero client:load edgeColo={edgeColo} />
+  <ArchitectureCases client:visible />
+  <RootsAndCraft client:visible />
+  <Footer client:visible />
+</Layout>

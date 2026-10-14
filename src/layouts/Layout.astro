@@ -1,0 +1,101 @@
+---
+import '@core/ds/tokens.css'
+import { BackToTop } from '@core/ui'
+
+interface Props {
+    title?: string;
+    description?: string;
+}
+
+const {
+    title = 'Ultimate Landing Page template',
+    description = 'A modern, high-converting Astro & React landing page template.',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800&display=swap"
+            rel="stylesheet"
+        />
+        <script is:inline>
+            const savedTheme = localStorage.getItem('theme')
+            if (savedTheme) {
+                document.documentElement.setAttribute('data-theme', savedTheme)
+} else if (
+                window.matchMedia('(prefers-color-scheme: dark)').matches
+            ) {
+                document.documentElement.setAttribute('data-theme', 'dark')
+            }
+        </script>
+    </head>
+    <body>
+        <a href="#main-content" class="skip-link">
+            Skip to main content
+        </a>
+        <main id="main-content" tabindex="-1">
+            <slot />
+        </main>
+        <BackToTop client:idle />
+    </body>
+</html>
+<style is:global>
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+    html {
+        scroll-behavior: smooth;
+    }
+    html,
+    body {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
+    #main-content:focus {
+        outline: none;
+    }
+    .skip-link {
+        position: absolute;
+        top: -100px;
+        left: 16px;
+        background-color: var(--colors-primary);
+        color: var(--colors-primaryContrast);
+        padding: 12px 20px;
+        border-radius: 8px;
+        font-weight: 600;
+        text-decoration: none;
+        z-index: 9999;
+        transition: top 0.2s ease;
+    }
+    .skip-link:focus {
+        top: 16px;
+        outline: 2px solid var(--colors-text);
+        outline-offset: 2px;
+    }
+    @media (prefers-reduced-motion: reduce) {
+        html {
+            scroll-behavior: auto !important;
+        }
+        *,
+        *::before,
+        *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+        }
+    }
+</style>

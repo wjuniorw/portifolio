@@ -1,0 +1,53 @@
+{
+  "name": "wjunior-portfolio",
+  "type": "module",
+  "version": "1.0.1",
+  "packageManager": "pnpm@12.4.2",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev --host",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "lint": "pnpm lint:oxlint && pnpm lint:eslint",
+    "lint:eslint": "eslint .",
+    "lint:oxlint": "oxlint .",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "@astrojs/react": "^6.0.5",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@vanilla-extract/css": "^1.21.2",
+    "@vanilla-extract/vite-plugin": "^5.2.6",
+    "astro": "^7.3.2",
+    "framer-motion": "^13.2.0",
+    "motion": "^13.2.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "wrangler": "^4.130.0"
+  },
+  "pnpm.onlyBuiltDependencies": [
+    "esbuild",
+    "workerd"
+  ],
+  "allowScripts": {
+    "esbuild": true,
+    "workerd": true
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "@commitlint/cli": "^21.2.2",
+    "@commitlint/config-conventional": "^21.2.2",
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.10.0",
+    "eslint-plugin-astro": "^3.1.0",
+    "eslint-plugin-perfectionist": "^5.11.0",
+    "husky": "^9.1.7",
+    "oxlint": "^1.82.0",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.70.0"
+  }
+}

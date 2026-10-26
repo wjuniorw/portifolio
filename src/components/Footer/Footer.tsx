@@ -28,10 +28,10 @@ export function Footer({ className, ...props }: FooterProps) {
           <div className={styles.ctaActions}>
             <Button
               as="a"
-              href="https://talks.wjunior.dev.br"
               target="_blank"
-              rel="noopener noreferrer"
               variant="primary"
+              rel="noopener noreferrer"
+              href="https://talks.wjunior.dev.br"
               onMouseEnter={() => setHoveredCta('talks')}
               onMouseLeave={() => setHoveredCta(null)}
             >
@@ -40,7 +40,7 @@ export function Footer({ className, ...props }: FooterProps) {
             </Button>
             <Button
               as="a"
-              href="https://www.linkedin.com/in/wilson-junior-dev"
+              href="https://www.linkedin.com/in/wjuniorw"
               target="_blank"
               rel="noopener noreferrer"
               variant="outline"

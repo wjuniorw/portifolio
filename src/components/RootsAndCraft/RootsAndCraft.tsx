@@ -14,11 +14,25 @@ interface CraftPillar {
 
 const CRAFT_PILLARS: CraftPillar[] = [
   {
+    id: 'bahia-roots',
+    subhead: '12° S, 38° W // Origem & Princípios',
+    title: 'Raízes Indígenas & Engenharia sem Ruído',
+    description:
+      '12 anos construindo sistemas duradouros a partir de Santa Cruz Cabrália, Bahia. Resiliência real forjada em ambientes desafiadores de conectividade intermitente e orçamentos que exigem máxima eficiência de CPU e memória, longe de modismos efêmeros da indústria.',
+    tags: [
+      'Cabrália, BA',
+      '12 Anos de Engenharia',
+      'Eficiência Computacional',
+      'Foco em Domínio & DDD',
+      'Resiliência Operacional',
+    ],
+  },
+  {
     id: 'hardware-craft',
     subhead: 'Maker Culture & Hardware Craftsmanship',
     title: 'Engenharia de Hardware & Silício na Bancada',
     description:
-      'Construção e dimensionamento de servidores Mini-ITX para home lab, cabeamento estruturado, testes de estresse térmico, diagnóstico em bancada com multímetro e osciloscópio, e interface de software com periféricos seriais (POS, impressoras térmicas e microcontroladores).',
+      'Construção e dimensionamento de servidores para home lab, Frente de caixa Mini-ITX, cabeamento estruturado, testes de estresse térmico, diagnóstico em bancada com multímetro e osciloscópio, e interface de software com periféricos seriais (POS, impressoras térmicas e microcontroladores).',
     tags: [
       'Mini-ITX Custom Builds',
       'Hardware Diagnostics',
@@ -56,20 +70,6 @@ const CRAFT_PILLARS: CraftPillar[] = [
       'Structured JSON Logs',
     ],
   },
-  {
-    id: 'bahia-roots',
-    subhead: '12° S, 38° W // Origem & Princípios',
-    title: 'Raízes Baianas & Engenharia sem Ruído',
-    description:
-      '12 anos construindo sistemas duradouros a partir de Salvador, Bahia. Resiliência real forjada em ambientes desafiadores de conectividade intermitente e orçamentos que exigem máxima eficiência de CPU e memória, longe de modismos efêmeros da indústria.',
-    tags: [
-      'Salvador, BA',
-      '12 Anos de Engenharia',
-      'Eficiência Computacional',
-      'Foco em Domínio & DDD',
-      'Resiliência Operacional',
-    ],
-  },
 ]
 
 export interface RootsAndCraftProps extends HTMLAttributes<HTMLElement> {
@@ -92,7 +92,7 @@ export function RootsAndCraft({ className, ...props }: RootsAndCraftProps) {
           </Heading>
           <Text size="lg" className={styles.sectionLead}>
             Engenharia não é apenas abstração de alto nível; é o domínio completo da pilha. Das placas de circuito
-            impresso na bancada aos servidores Mini-ITX autohospedados e à borda global da Cloudflare.
+            impresso na bancada aos servidores autohospedados e à borda global da Cloudflare.
           </Text>
         </div>
 

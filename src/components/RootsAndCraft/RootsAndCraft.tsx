@@ -15,7 +15,7 @@ interface CraftPillar {
 const CRAFT_PILLARS: CraftPillar[] = [
   {
     id: 'bahia-roots',
-    subhead: '12° S, 38° W // Origem & Princípios',
+    subhead: '16°10 S, 39°00 W // Origem & Princípios',
     title: 'Raízes Indígenas & Engenharia sem Ruído',
     description:
       '12 anos construindo sistemas duradouros a partir de Santa Cruz Cabrália, Bahia. Resiliência real forjada em ambientes desafiadores de conectividade intermitente e orçamentos que exigem máxima eficiência de CPU e memória, longe de modismos efêmeros da indústria.',
